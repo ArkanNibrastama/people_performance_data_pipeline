@@ -15,4 +15,4 @@ date_yesterday = (datetime.now().astimezone(timezone(timedelta(hours=7)))-timede
 df_filtered = df.loc[df['date'] == date_yesterday]
 
 table = pa.Table.from_pandas(df_filtered)
-pq.write_table(table, "datalake/bronze/01-08-2024-gsheet.parquet")   
+pq.write_table(table, "datalake/bronze/01-08-2024-gsheet.parquet")  
