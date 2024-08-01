@@ -1,6 +1,0 @@
-date-tpye
-
-ex: 
-30-07-2024-api.parquet
-30-07-2024-db.parquet
-30-07-2024-gsheet.parquet
