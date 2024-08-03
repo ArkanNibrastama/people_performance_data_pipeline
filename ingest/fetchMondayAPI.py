@@ -1,13 +1,10 @@
 import requests, json, os
 from dotenv import load_dotenv
 import pandas as pd
-import pyarrow as pa
-import pyarrow.parquet as pq
 from datetime import datetime, timedelta, timezone
 
 # utc+7 (follow indonesia timezone)
 date_yesterday = (datetime.now().astimezone(timezone(timedelta(hours=7)))-timedelta(days=1)).strftime("%Y-%m-%d")
-
 
 load_dotenv()
 
@@ -20,7 +17,7 @@ headers = {
 query = '''
             query { 
                 boards(ids: 1896672101){
-                    items_page (limit: 2){
+                    items_page{
                         items{
                             name
                             column_values{
@@ -46,16 +43,20 @@ final_res = []
 for i in json_res['data']['boards'][0]['items_page']['items']:
 
     tmp = {
-        'task': i['name'],
-        'person' : i['column_values'][0]['text'],
-        'status' : i['column_values'][1]['text'],
         'date' : i['column_values'][2]['text'],
-        'note' : i['column_values'][3]['text'],
+        'person' : i['column_values'][0]['text'],
+        'role' : i['column_values'][1]['text'],
+        'task': i['name'],
+        'level' : i['column_values'][3]['text'],
+        'note' : i['column_values'][4]['text'],
+        'progress (%)' : i['column_values'][5]['text']
     }
 
     final_res.append(tmp)
 
 df = pd.DataFrame(final_res)
 df_filtered = df.loc[df['date'] == date_yesterday]
-table = pa.Table.from_pandas(df_filtered)
-pq.write_table(table, f'datalake/bronze/{datetime.now()}-api.parquet')
+
+# print(df_filtered)
+
+df_filtered.to_parquet(f"../datalake/bronze/{datetime.now().strftime('%Y-%m-%d')}-api.parquet", index=False)

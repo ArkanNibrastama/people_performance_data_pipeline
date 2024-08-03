@@ -2,8 +2,6 @@ import pandas as pd
 from datetime import datetime, timedelta, timezone
 import os
 from dotenv import load_dotenv
-import pyarrow as pa
-import pyarrow.parquet as pq
 
 load_dotenv()
 
@@ -14,5 +12,4 @@ date_yesterday = (datetime.now().astimezone(timezone(timedelta(hours=7)))-timede
 
 df_filtered = df.loc[df['date'] == date_yesterday]
 
-table = pa.Table.from_pandas(df_filtered)
-pq.write_table(table, f"datalake/bronze/{datetime.now()}-gsheet.parquet")  
+df_filtered.to_parquet(f"../datalake/bronze/{datetime.now().strftime('%Y-%m-%d')}-gsheet.parquet", index=False)

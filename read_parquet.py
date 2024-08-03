@@ -1,7 +1,5 @@
 import pandas as pd
-import pyarrow.parquet as pq
 
-table = pq.read_table('datalake/bronze/01-08-2024-db.parquet')
-df = table.to_pandas()
+df = pd.read_parquet('datalake/bronze/2024-08-03-api.parquet')
 
 print(df)
