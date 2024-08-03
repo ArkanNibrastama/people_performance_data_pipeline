@@ -1,0 +1,37 @@
+role,level,min_progress,max_progress,points
+data analyst,easy,0,25,10
+data analyst,easy,25,50,15
+data analyst,easy,50,75,20
+data analyst,easy,75,100,25
+data analyst,medium,0,25,20
+data analyst,medium,25,50,25
+data analyst,medium,50,75,30
+data analyst,medium,75,100,35
+data analyst,hard,0,25,30
+data analyst,hard,25,50,35
+data analyst,hard,50,75,40
+data analyst,hard,75,100,45
+data engineer,easy,0,25,20
+data engineer,easy,25,50,25
+data engineer,easy,50,75,30
+data engineer,easy,75,100,35
+data engineer,medium,0,25,40
+data engineer,medium,25,50,45
+data engineer,medium,50,75,50
+data engineer,medium,75,100,55
+data engineer,hard,0,25,60
+data engineer,hard,25,50,65
+data engineer,hard,50,75,70
+data engineer,hard,75,100,75
+fullstack,easy,0,25,45
+fullstack,easy,25,50,50
+fullstack,easy,50,75,55
+fullstack,easy,75,100,60
+fullstack,medium,0,25,65
+fullstack,medium,25,50,70
+fullstack,medium,50,75,75
+fullstack,medium,75,100,80
+fullstack,hard,0,25,85
+fullstack,hard,25,50,90
+fullstack,hard,50,75,95
+fullstack,hard,75,100,100
