@@ -1,5 +1,6 @@
 from pyspark.sql import SparkSession
 from datetime import datetime
+import os
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -8,8 +9,9 @@ class ReadData:
 
     def __init__(self, type):
         # no need when in databricks
+        print()
         self.spark = SparkSession.builder.\
-                     master("spark://172.20.10.10:7077").\
+                     master("spark://192.168.1.9:7077").\
                      appName("read data from bronze datalake").\
                      getOrCreate()
         
@@ -19,7 +21,7 @@ class ReadData:
     def readFromBronze(self):
         df = self.spark.read.\
                   format("parquet").\
-                  load(f"datalake/bronze/{self.date}-{self.type}.parquet")
+                  load(f"../datalake/bronze/{self.date}-{self.type}.parquet")
         
         return df
     
@@ -27,7 +29,7 @@ class ReadData:
         df = self.spark.read.\
                   format("csv").\
                   option("header", "True").\
-                  load(f"delta_live/points-{self.type}.csv")
+                  load(f"../delta_live/points-{self.type}.csv")
         
         return df
     
