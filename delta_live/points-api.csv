@@ -23,15 +23,27 @@ data engineer,hard,0,25,60
 data engineer,hard,25,50,65
 data engineer,hard,50,75,70
 data engineer,hard,75,100,75
-fullstack,easy,0,25,45
-fullstack,easy,25,50,50
-fullstack,easy,50,75,55
-fullstack,easy,75,100,60
-fullstack,medium,0,25,65
-fullstack,medium,25,50,70
-fullstack,medium,50,75,75
-fullstack,medium,75,100,80
-fullstack,hard,0,25,85
-fullstack,hard,25,50,90
-fullstack,hard,50,75,95
-fullstack,hard,75,100,100
+project manager,easy,0,25,45
+project manager,easy,25,50,50
+project manager,easy,50,75,55
+project manager,easy,75,100,60
+project manager,medium,0,25,65
+project manager,medium,25,50,70
+project manager,medium,50,75,75
+project manager,medium,75,100,80
+project manager,hard,0,25,85
+project manager,hard,25,50,90
+project manager,hard,50,75,95
+project manager,hard,75,100,100
+ui/ux,easy,0,25,15
+ui/ux,easy,25,50,20
+ui/ux,easy,50,75,25
+ui/ux,easy,75,100,30
+ui/ux,medium,0,25,35
+ui/ux,medium,25,50,40
+ui/ux,medium,50,75,45
+ui/ux,medium,75,100,50
+ui/ux,hard,0,25,55
+ui/ux,hard,25,50,60
+ui/ux,hard,50,75,65
+ui/ux,hard,75,100,70
