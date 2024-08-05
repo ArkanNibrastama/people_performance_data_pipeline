@@ -1,25 +1,25 @@
 role,level,min_progress,max_progress,points
-researcher,easy,0,25,10
-researcher,easy,25,50,20
-researcher,easy,50,75,30
+researcher,easy,0,24,10
+researcher,easy,25,49,20
+researcher,easy,50,74,30
 researcher,easy,75,100,40
-researcher,medium,0,25,15
-researcher,medium,25,50,30
-researcher,medium,50,75,50
+researcher,medium,0,24,15
+researcher,medium,25,49,30
+researcher,medium,50,74,50
 researcher,medium,75,100,70
-researcher,hard,0,25,20
-researcher,hard,25,50,40
-researcher,hard,50,75,70
+researcher,hard,0,24,20
+researcher,hard,25,49,40
+researcher,hard,50,74,70
 researcher,hard,75,100,90
-design & development,easy,0,25,15
-design & development,easy,25,50,25
-design & development,easy,50,75,35
+design & development,easy,0,24,15
+design & development,easy,25,49,25
+design & development,easy,50,74,35
 design & development,easy,75,100,50
-design & development,medium,0,25,25
-design & development,medium,25,50,40
-design & development,medium,50,75,65
+design & development,medium,0,24,25
+design & development,medium,25,49,40
+design & development,medium,50,74,65
 design & development,medium,75,100,90
-design & development,hard,0,25,30
-design & development,hard,25,50,50
-design & development,hard,50,75,80
+design & development,hard,0,24,30
+design & development,hard,25,49,50
+design & development,hard,50,74,80
 design & development,hard,75,100,100
