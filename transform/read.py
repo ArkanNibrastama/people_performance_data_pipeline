@@ -1,22 +1,18 @@
 from pyspark.sql import SparkSession
 from datetime import datetime
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 class ReadData:
 
     def __init__(self, type):
         # no need when in databricks
-        print()
         self.spark = SparkSession.builder.\
                      master("spark://192.168.1.9:7077").\
                      appName("read data from bronze datalake").\
                      getOrCreate()
         
         self.type = type
-        self.date = datetime.now().strftime("%Y-%m-%d")
+        # self.date = datetime.now().strftime("%Y-%m-%d")
+        self.date = "2024-08-05"
         
     def readFromBronze(self):
         df = self.spark.read.\
