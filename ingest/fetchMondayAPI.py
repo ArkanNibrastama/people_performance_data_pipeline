@@ -14,9 +14,10 @@ headers = {
     "API-Version" : "2024-04"
     }
 
+
 query = '''
             query { 
-                boards(ids: 1896672101){
+                boards(ids: 1902185968){
                     items_page{
                         items{
                             name
