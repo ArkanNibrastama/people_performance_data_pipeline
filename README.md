@@ -26,7 +26,7 @@ The primary goals of the People Performance Data Pipeline project include:
 ![points](./img/points.png)
 5. Copy data_ingestion, transformation, and data_validation folder into databricks
 6. After that make a job from the notebook like this
-![flow](./img/workflow.png.)
+![workflow](./img/workflow.png)
 
 # Conclusion
 The implementation of the People Performance Data Pipeline has had a significant impact on the HR department's ability to manage and analyze employee performance data. By centralizing and standardizing data from multiple sources, and processing over <b>10,000+ data</b> using PySpark, the project has <b>reduced the process in HR department</b> by approximately <b>75%</b>, enabling faster and more accurate reporting. The data validation processes have <b>ensured high data quality</b>, leading to more reliable insights and predictions. As a result, the HR department has been able to identify underperforming areas and take proactive measures to boost productivity, contributing to increase in overall company performance. This project demonstrates the value of leveraging data engineering and machine learning to drive business success.
